@@ -1,12 +1,214 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Page Title</title>
+  <title>trevor bonjour</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <link rel="icon" href="logo_.png">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body>
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
+<style>
+body {
+        font-family: 'Source Code Pro', monospace;
+        color: #3A424B;
+        padding-bottom: 80px;
+      }
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 15px;
+    letter-spacing: 5px;
+}
 
+.navbar-nav li a:hover {
+    color: #15508F !important;
+}
+.bg-1 {
+    background-color: #15508F; /* Green */
+    color: #ffffff;
+    width: auto;
+}
+.bg-2 {
+    background-color: #79B8FD; /* Green */
+    color: #ffffff;
+    width: auto;
+}
+.bg-3 {
+    background-color: #D2E6F9; /* Green */
+    color: #15508F;
+    width: auto;
+}
+.container {
+    padding: 80px 120px;
+}
+p{
+  text-align: justify;
+}
+
+</style>
+<body id="mypage" data-spy="scroll" data-target=".navbar" data-offset="50">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="#" class="navbar-left"><img src="logo_.png" width=50></a>
+        <a class="navbar-brand" href="#">trevor bonjour</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right container-fluid">
+          <li><a href="#mypage">about me</a></li>
+          <li><a href="#research">research</a></li>
+          <li><a href="#projects">projects</a></li>
+          <li><a href="#teaching">teaching</a></li>
+          <li><a class="fa fa-external-link" href="trevor_resume.pdf" target="_blank">cv</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--########## ABOUT_ME ##########-->
+  <div id = "about me"class="container" >
+    <div class="col-md-10">
+          <h2>about me</h2>
+        <p>I am a graduate student in the <a href="https://www.cs.jhu.edu/" target="_blank">Computer Science Department</a>
+        at <a href="https://www.jhu.edu/" target="_blank">Johns Hopkins University</a>.
+        I work with <a href="https://www.cs.jhu.edu/faculty/ilya-shpitser-3/" target="_blank">Dr. Ilya Shpitser</a> affiliated with the <a href="http://malonecenter.jhu.edu/" target="_blank"> Malone Center for Engineering in Healthcare</a>.
+        <p> Before joining Hopkins, I worked at <a href="http://www.cummins.com" target="_blank">Cummins Inc.</a> and <a href="http://www.tcs.com" target="_blank">Tata Consultancy Services Ltd.</a> as an I.T. Analyst for almost 5 years.
+          I received my Bachelors in Technology in Instrumentation and Control Engineering from <a herf http://bvcoend.ac.in/>Bharati Vidyapeth College of Engineering</a>, Delhi.
+      </div>
+      <div class="col-md-2 text-right">
+        <img src="img.jpeg" alt="me" class="img-circle" width=160 align="center">
+        email:<a href="mailto:tbonjou1@jhu.edu">tbonjou1@jhu.edu</a>
+     </div>
+  </div>
+  <!--########## RESEARCH ##########-->
+<div id="research" class="container">
+  <div class="col-md-12">
+    <h2>research</h2>
+    <p>My main areas of interest are Causal Inference and Machine Learning, mostly involving probabilistic graphical models. On a broad level my interests lie in Artificial Intelligence, Cognitive Science and Philosophy of Science.</p>
+  </div>
+</div>
+<!--########## PROJECTS ##########-->
+<div id = "projects" class="container">
+  <div class="col-md-12">
+    <h2>projects</h2>
+    <br>
+      <h4>Causal Identification when True Graph Structure is not known
+      </h4>
+      <p align="justify">Working in collaboration with <a href="http://people.hss.caltech.edu/~fde/index.html" target="_blank">Dr. Frederick Eberhardt</a> on developing a method to identify causal effects from observational data without assuming a unique true causal structure.
+      </p>
+    <br>
+      <h4>asl-a: American Sign Language Assistant
+      </h4>
+      <p align="justify">A software package to convert ASL gestures to text/audio. The aim of the project is to create a system using which people with speech impairments can easily communicate with people who do not know ASL. We have implemented gesture recognition and conversion for the 26 alphabets for the english language. Currently we are working on adding simple phrases.
+      </p>
+      <br>
+      <h4>Evolution of Variational Inference
+      </h4>
+      <p align="justify"> A review study of the evolution from Classical Variational Inference(2003) to Automatic Differentiation Variational Infernce(2015)
+      </p>
+      <br>
+      <h4>MLaaS: Machine Learning as a Service for exploring large datasets
+      </h4>
+      <p align = "justify">
+        Used deep neural networks to learn on BPTI protein trajectories for multiple users leveraging commonalities.
+      </p>
+      <br>
+        <h4>Classification of Piano music by Composers
+       </h4>
+       <p align = "justify">
+       Used various machine learning techniques like SVM, Naïve Bayes, k-fold Cross Validation to classify and analyze the results. Found some interesting results, specially using PCA to show similarities in composers.
+       </p>
+  </div>
+</div>
+<!--########## PROJECTS ##########-->
+<div id="teaching" class="container">
+  <div class="col-md-12">
+    <h2>teaching</h2>
+    <h4>Head Teaching Assistant, Johns Hopkins University</h4>
+    EN.600.476/676 Data to Models: Machine Learning - Srping 2017 <br>
+    EN.600.226 Data Structures - Fall 2016 <br>
+    EN.600.226.21 Data Structures - Summer 2016
+  </div>
+</div>
+<div id="footer" class="container">
+
+
+
+
+
+
+</div>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#mypage']").on('click', function(event) {
+
+  // Make sure this.hash has a value before overriding default behavior
+  if (this.hash !== "") {
+
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Store hash
+    var hash = this.hash;
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
+
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+<style>
+/* Add a dark background color to the footer */
+footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+}
+
+footer a {
+    color: #f5f5f5;
+}
+
+footer a:hover {
+    color: #777;
+    text-decoration: none;
+}
+</style>
+
+<footer class="text-center">
+  <a class="up-arrow" href="#mypage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>Website created by tbonjour <a class="fa fa-copyright"></a></p>
+</footer>
+<script>
+
+$(document).ready(function(){
+    // Initialize Tooltip
+    $('[data-toggle="tooltip"]').tooltip();
+})
+</script>
 </body>
 </html>

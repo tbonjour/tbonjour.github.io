@@ -1,2 +1,2 @@
-# tbonjour.github.io
-Personal Webpage
+# jhu-website
+Hopkins website: http://www.cs.jhu.edu/~tbonjou1/
