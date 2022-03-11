@@ -1,2 +1,2 @@
-# jhu-website
-Hopkins website: http://www.cs.jhu.edu/~tbonjou1/
+# Personal Website
+http://www.trevorbonjour.me
