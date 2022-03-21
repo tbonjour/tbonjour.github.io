@@ -1,2 +1,2 @@
 # Personal Website
-http://www.trevorbonjour.me
+http://trevorbonjour.me
