@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="HandheldFriendly" content="True">
-
+    
     <!-- Copied from bootstrap 5 website -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- Google Icons Stylesheet -->
@@ -17,9 +17,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+<link rel="stylesheet" href="style.css">
   </head>
-  <style>
+  <!-- <style>
 
  html {
   scroll-behavior: smooth;
@@ -148,7 +148,7 @@ a:active { text-decoration: underline; }
     position: relative;
     top: -1px;
   }
- </style>
+ </style> -->
   <body id="mypage" data-bs-spy="scroll" data-bs-target=".navbar" data-offset="50">
     <!-- Navigation Bar Starts -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light px-3">
@@ -189,7 +189,8 @@ a:active { text-decoration: underline; }
                 <a class="nav-link" href="#teaching">Teaching</a>
             </li>
             <li class="nav-item">
-                  <a class="nav-link" href="trevor_resume.pdf" target="_blank">Resume<i class="material-icons-outlined">open_in_new</i></a>
+                  <!-- <a class="nav-link" href="trevor_resume.pdf" target="_blank">Resume<i class="material-icons-outlined">open_in_new</i></a> -->
+                  <a class="nav-link" href="#resume">Resume</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="https://trevorbonjour.me/blog/" target="_blank">Blog<i class="material-icons-outlined">open_in_new</i></a>
@@ -252,7 +253,7 @@ a:active { text-decoration: underline; }
         <div class="col-md-9">
               <h2>About Me</h2>
             <p>I am a Ph.D. student advised by <a href="https://www.cs.purdue.edu/homes/bb/" target="_blank"> Dr. Bharat Bhargava</a> at the <a href="https://www.cs.purdue.edu/" target="_blank">Department of Computer Science</a> at <a href="https://www.purdue.edu" target="_blank">Purdue University</a>. My current research focuses on developing reinforcement learning techniques to build agents capable of detecting and adapting to novel situations(unseen during training) in multi-agent environments. 
-    
+            
               <!-- <p>Previously, I earned my Masters Degree in Computer Science from <a href="https://www.jhu.edu/" target="_blank">Johns Hopkins University</a> where I briefly worked on Causal Inference with <a href="https://www.cs.jhu.edu/faculty/ilya-shpitser-3/" target="_blank">Dr. Ilya Shpitser</a> affiliated with the <a href="http://malonecenter.jhu.edu/" target="_blank"> Malone Center for Engineering in Healthcare</a>.
     
             <p> Before that, I worked at <a href="http://www.cummins.com" target="_blank">Cummins Inc.</a> and <a href="http://www.tcs.com" target="_blank">Tata Consultancy Services Ltd.</a> as an I.T. Analyst for 5 years.
@@ -276,6 +277,12 @@ a:active { text-decoration: underline; }
       <div class="col-md-12">
         <h2>Research</h2>
         <p>My main areas of interest are Reinforcement Learning, Machine Learning, Natural Language Processing, and Causal Inference. Broadly, I'm interested in Artificial Intelligence, Cognitive Science, and Philosophy of Science.</p>
+
+        <h3> Publications </h3>
+
+        <p>Bonjour, Trevor, et al. "Decision Making in Monopoly using a Hybrid Deep Reinforcement Learning Approach." accepted in IEEE Transactions on Emerging Topics in Computational Intelligence (2022)</p>
+
+        <p>Bonjour, Trevor, Aggarwal, Vaneet, and Bharat Bhargava “Information Theoretic Approach to Detect Collusion in Multi-Agent Games”, accepted in AAAI Symposium (2022)</p>
       </div>
     </div>
   </div>
@@ -331,6 +338,16 @@ a:active { text-decoration: underline; }
       </div>
     </div>
   </div>
+  <div id="resume" class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Resume</h2><br>
+  <iframe src="trevor_resume.pdf" type="application/pdf" width = "100%" height = "700px">
+  </iframe>
+    </div>
+    </div>
+  </div>
+
   <!-- <div class = "container center">
   <div class="embed-responsive embed-responsive-21by9">
       <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
@@ -341,6 +358,7 @@ a:active { text-decoration: underline; }
       <span class="text-muted">Place sticky footer content here.</span>
     </div>
   </footer -->
+
   <div class="container-fluid">
     <footer class="footer text-center" >
         

@@ -1,0 +1,127 @@
+html {
+  scroll-behavior: smooth;
+} 
+a:link { text-decoration: none; color: #15508f ;}
+a:visited { text-decoration: none; color: #15508f ;}
+a:hover { text-decoration: underline; }
+a:active { text-decoration: underline; }
+
+    @media (min-width: 1200px) {
+    .container{
+        max-width: 900px;
+    }
+}
+    body {
+      font-family: 'Open Sans', sans-serif;
+      /* font-family: "PT Sans", monospace; */
+      color: #3a424b;
+      padding-bottom: 80px;
+    }
+    .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 15px;
+      letter-spacing: 2px;
+    }
+    .navbar a:hover { text-decoration: none;}
+    .navbar-nav a:hover {
+      color: #15508f !important;
+      text-decoration: none;
+    }
+    .bg-1 {
+      background-color: #15508f; /* Green */
+      color: #ffffff;
+      width: auto;
+    }
+    .bg-2 {
+      background-color: #79b8fd; /* Green */
+      color: #ffffff;
+      width: auto;
+    }
+    .bg-3 {
+      background-color: #d2e6f9; /* Green */
+      color: #15508f;
+      width: auto;
+    }
+    .container {
+    padding-top: 140px;
+  }
+  p{
+    text-align: justify;
+  }
+
+  /* Add a dark background color to the footer */
+  .footer{
+    margin-top: 140px;
+  }
+  footer {
+        background-color: #2d2d30;
+        color: #f5f5f5;
+        padding-top: 12px;
+        padding-left: 52px;
+        padding-right: 52px;
+        padding-bottom: 52px;
+    }
+    
+    footer a {
+        color: #f5f5f5;
+    }
+    footer i {
+        color: #f5f5f5;
+    }
+    .footer a:link { 
+      text-decoration: none; 
+      color: #f5f5f5 ;
+      }
+    .footer a:visited {
+        color: #f5f5f5;
+        text-decoration: none;
+    }
+    .footer a:hover {
+        color: #777;
+        text-decoration: none;
+    }
+    footer a:hover {
+        color: #777;
+        text-decoration: none;
+    }
+    .center {
+  text-align: center
+  }
+  .copyright {
+    float: left;
+}
+
+.social { 
+    float: right;
+}
+  /* i.material-icons {
+    font-size: 16px;
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
+    top: -1px;
+  } */
+  i.material-icons-outlined {
+    font-size: 14px;
+    text-align: center;
+    position: relative;
+    top: -1px;
+  }
+  i.fas{
+    font-size: 20px;
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
+    top: -1px;
+  }
+  i.fab{
+    font-size: 20px;
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
+    top: -1px;
+  }
