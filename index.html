@@ -19,6 +19,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="style.css">
   </head>
+  <style>
+      .iframe-container {
+      overflow: hidden;
+      /* 16:9 aspect ratio */
+      padding-top: 56.25%;
+      position: relative;
+    }
+    .iframe-container iframe {
+       border: 0;
+       height: 100%;
+       left: 0;
+       position: absolute;
+       top: 0;
+       width: 100%;
+    }
+</style>
   <!-- <style>
 
  html {
@@ -340,9 +356,10 @@ a:active { text-decoration: underline; }
   </div>
   <div id="resume" class="container">
     <div class="row">
-      <div class="col-md-12">
+      <div class="iframe-container">
         <h2>Resume</h2><br>
-          <iframe src="trevor_resume.pdf#view=FitH" type="application/pdf" width = "100%" height = "100%">
+          <!-- https://www.benmarshall.me/responsive-iframes/ -->
+          <iframe src="trevor_resume.pdf#view=FitH" type="application/pdf">
           </iframe>
     </div>
     </div>
