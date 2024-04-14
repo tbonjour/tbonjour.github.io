@@ -1,2 +1,2 @@
 # Personal Website
-https://trevorbonjour.me
+https://tbonjour.github.io
