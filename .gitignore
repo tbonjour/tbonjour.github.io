@@ -22,5 +22,5 @@ package-lock.json
 !.vscode/extensions.json
 !.vscode/tasks.json
 
-# Misci
+# Misc
 .DS_Store
