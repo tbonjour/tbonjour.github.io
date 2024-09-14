@@ -3,8 +3,6 @@
 icon: fa-solid fa-book-open-reader
 order: 2
 ---
-My main areas of interest are Reinforcement Learning, Machine Learning, Natural Language Processing, and Causal Inference. Broadly, I'm interested in Artificial Intelligence, Cognitive Science, and Philosophy of Science.
-
 ### Publications
 - **Trevor Bonjour**, Vaneet Aggarwal and Bharat Bhargava. DABLER: Deep adaptive broad learning agent with environment recognition. (preprint), 2024.  
 - Shafkat Islam, Min-Hsueh Chiu, **Trevor Bonjour**, Ruy De Oliveira, Bharat Bhargava, and Mayank Kejriwal. A q-learning novelty search strategy for evaluating robustness of deep reinforcement learning in open-world environments. (Under Review), 2024.  
