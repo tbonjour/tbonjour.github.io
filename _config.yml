@@ -1,5 +1,13 @@
 # The Site Configuration
 
+plugins:
+  - jekyll-scholar
+scholar:
+  bibliography: my_publications.bib
+  bibliography_template: bib
+  sort_by: [year, month]
+  order: descending
+  style: apa
 # Import the theme
 theme: jekyll-theme-chirpy
 
@@ -170,6 +178,8 @@ collections:
   notabs:
     output: true
     sort_by: order
+  publications:
+    output: true
 
 defaults:
   - scope:

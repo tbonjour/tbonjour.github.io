@@ -1,5 +1,6 @@
 ---
 # the default layout is 'page'
+title: Contact
 icon: fas fa-address-card
 order: 3
 ---

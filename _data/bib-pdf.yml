@@ -1,0 +1,8 @@
+# Map BibTeX keys to external links (PDF, arXiv, pre-prints, etc.)
+bonjour_information_2022:
+  pdf: https://proceedings.mlr.press/v180/bonjour22a/bonjour22a.pdf
+  pdf: /assets/papers/bonjour22a.pdf
+bonjour_decision_2022:
+  pdf: https://arxiv.org/pdf/2103.00683
+  # pdf: /assets/papers/decision2022.pdf
+# Add more entries as needed
