@@ -1,36 +1,17 @@
----
----
 <div class="bibliography list-unstyled">
-  <div class="row pub-entry mb-3">
-    <div class="col-sm-12" style="overflow-wrap:break-word; word-break:break-word;">
-      <!-- Remove numbering, do not display any index or number -->
-      <div class="pub-title mb-1" style="color:var(--heading-color);">
+  <div class="row pub-entry">
+    <div class="col-sm-12">
+      <div class="pub-title">
         <strong>{{ entry.title }}</strong>
       </div>
-      <div class="pub-authors mb-1" style="color:var(--text-color);">
+      <div class="pub-authors">
         {%- assign authors = entry.author | split: ' and ' -%}
         {%- for author in authors -%}
-          {%- assign parts = author | split: ', ' -%}
-          {%- if parts.size == 2 -%}
-            {%- assign first = parts[1] -%}
-            {%- assign last = parts[0] -%}
-            {%- assign full = first | append: ' ' | append: last -%}
-          {%- else -%}
-            {%- assign full = author -%}
-          {%- endif -%}
-          {%- if full contains 'Trevor Bonjour' or full contains 'T. Bonjour' -%}
-            <strong>{{ full }}</strong>
-          {%- else -%}
-            {{ full }}
-          {%- endif -%}
-          <!-- Remove comma after last author, and trailing period -->
+          {{ author }}
           {%- unless forloop.last -%}, {% endunless -%}
         {%- endfor -%}
       </div>
-      <div
-        class="pub-venue mb-1"
-        style="background:var(--card-bg); color:var(--heading-color); display:inline-block; padding:2px 8px; border-radius:6px;"
-      >
+      <div class="pub-venue">
         {%- assign proceedings = 'inproceedings,incollection' | split: ',' -%}
         {%- assign thesis = 'thesis,mastersthesis,phdthesis' | split: ',' -%}
         {%- if entry.type == 'article' -%}
@@ -40,64 +21,39 @@
         {%- elsif thesis contains entry.type -%}
           <em>{{ entry.school }}</em>
         {%- endif -%}
-        {%- if entry.month or entry.year -%}
-          <span style="color:var(--text-muted-color); margin-left:6px;">
+        {% if entry.month or entry.year %}
+          <span class="pub-date">
             {%- if entry.month -%}{{ entry.month | capitalize }} {% endif -%}
             {%- if entry.year -%}{{ entry.year }}{% endif -%}
           </span>
-        {%- endif -%}
+        {% endif %}
       </div>
-      <div class="pub-links mb-1" style="display:flex; flex-wrap:wrap; gap:6px; align-items:center;">
+      <div class="pub-links">
         {% assign links = site.data['bib-pdf'][entry.key] %}
         {% if links %}
           {% if links.pdf %}
-            <a
-              href="{{ links.pdf }}"
-              style="color:var(--link-color); border:1px solid var(--link-color); background:transparent; padding:2px 8px; border-radius:6px; text-decoration:none;"
-              target="_blank"
-              >PDF</a
-            >
+            <a href="{{ links.pdf }}" target="_blank">PDF</a>
           {% endif %}
           {% if links.arxiv %}
-            <a
-              href="{{ links.arxiv }}"
-              style="color:var(--link-color); border:1px solid var(--link-color); background:transparent; padding:2px 8px; border-radius:6px; text-decoration:none;"
-              target="_blank"
-              >arXiv</a
-            >
+            <a href="{{ links.arxiv }}" target="_blank">arXiv</a>
           {% endif %}
           {% if links.preprint %}
-            <a
-              href="{{ links.preprint }}"
-              style="color:var(--link-color); border:1px solid var(--link-color); background:transparent; padding:2px 8px; border-radius:6px; text-decoration:none;"
-              target="_blank"
-              >Preprint</a
-            >
+            <a href="{{ links.preprint }}" target="_blank">Preprint</a>
           {% endif %}
         {% endif %}
         {% if entry.doi %}
-          <a
-            href="https://doi.org/{{ entry.doi }}"
-            style="color:var(--link-color); border:1px solid var(--link-color); background:transparent; padding:2px 8px; border-radius:6px; text-decoration:none;"
-            target="_blank"
-            >DOI</a
-          >
+          <a href="https://doi.org/{{ entry.doi }}" target="_blank">DOI</a>
         {% elsif entry.url %}
-          <a
-            href="{{ entry.url }}"
-            style="color:var(--link-color); border:1px solid var(--link-color); background:transparent; padding:2px 8px; border-radius:6px; text-decoration:none;"
-            target="_blank"
-            >Link</a
-          >
+          <a href="{{ entry.url }}" target="_blank">Link</a>
         {% endif %}
         {% if entry.abstract %}
           <a
             href="#"
-            style="color:var(--link-color); border:1px solid var(--link-color); background:transparent; padding:2px 8px; border-radius:6px; text-decoration:none;"
             onclick="
               var abs = document.getElementById('abs-{{ entry.key }}');
               var bib = document.getElementById('bib-{{ entry.key }}');
-              abs.style.display = (abs.style.display === 'none' ? 'block' : 'none');
+              var current = window.getComputedStyle(abs).display;
+              abs.style.display = (current === 'none' ? 'block' : 'none');
               if (abs.style.display === 'block' && bib) { bib.style.display = 'none'; }
               return false;
             "
@@ -106,11 +62,11 @@
         {% endif %}
         <a
           href="#"
-          style="color:var(--link-color); border:1px solid var(--link-color); background:transparent; padding:2px 8px; border-radius:6px; text-decoration:none;"
           onclick="
             var abs = document.getElementById('abs-{{ entry.key }}');
             var bib = document.getElementById('bib-{{ entry.key }}');
-            bib.style.display = (bib.style.display === 'none' ? 'block' : 'none');
+            var current = window.getComputedStyle(bib).display;
+            bib.style.display = (current === 'none' ? 'block' : 'none');
             if (bib.style.display === 'block' && abs) { abs.style.display = 'none'; }
             return false;
           "
@@ -118,18 +74,12 @@
         >
       </div>
       {% if entry.abstract %}
-        <div
-          id="abs-{{ entry.key }}"
-          style="display:none; margin-top:4px; margin-bottom:4px; border-left:2px solid #eee; padding-left:8px; color:var(--text-color); background:var(--card-bg); overflow-wrap:break-word; word-break:break-word; text-align:justify;"
-        >
+        <div id="abs-{{ entry.key }}" class="abstract-box">
           {{ entry.abstract }}
         </div>
       {% endif %}
-      <div
-        id="bib-{{ entry.key }}"
-        style="display:none; margin-top:2px; margin-bottom:2px; border-left:2px solid #eee; padding-left:8px; color:var(--text-color); background:var(--card-bg);"
-      >
-        <pre style="font-size:90%; white-space:pre; margin:0; background:transparent; color:inherit;">{{ entry.bibtex }}</pre>
+      <div id="bib-{{ entry.key }}" class="bibtex-box">
+        <pre>{{ entry.bibtex }}</pre>
       </div>
     </div>
   </div>

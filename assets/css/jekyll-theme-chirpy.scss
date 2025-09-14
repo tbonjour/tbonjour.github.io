@@ -1,16 +1,85 @@
 ---
 ---
 
-
+/* prettier-ignore */
+@use 'main
 {%- if jekyll.environment == 'production' -%}
-@import 'main.bundle';
-{%- else -%}
-@import 'main';
+  .bundle
 {%- endif -%}
+';
 
 /* append your custom style below */
 
 ol.bibliography {
   list-style-type: none;
   padding-left: 0;
+}
+
+// .bibliography.list-unstyled {
+// }
+
+.pub-entry {
+  margin-bottom: 1rem;
+}
+
+.pub-title {
+  margin-bottom: 0.25rem;
+  color: var(--heading-color);
+}
+
+.pub-authors {
+  margin-bottom: 0.25rem;
+  color: var(--text-color);
+}
+
+.pub-venue {
+  background: var(--sidebar-bg);
+  color: var(--heading-color);
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 6px;
+
+  .pub-date {
+    color: var(--text-muted-color);
+    margin-left: 6px;
+  }
+}
+
+.pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+
+  a {
+    // border-bottom: none !important; // required because the theme sets it via a placeholder
+    color: var(--link-color);
+    border: 1px solid var(--link-color) !important; /* force all sides */
+    background: transparent;
+    padding: 2px 8px;
+    border-radius: 6px;
+    text-decoration: none !important;
+  }
+}
+
+.abstract-box,
+.bibtex-box {
+  display: none;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border: 1px solid var(--text-muted-color);
+  padding: 8px;
+  color: var(--text-color);
+  background: var(--card-bg);
+  overflow-wrap: break-word;
+  word-break: break-word;
+  text-align: justify;
+}
+
+.bibtex-box pre {
+  font-size: 90%;
+  white-space: pre;
+  margin: 0;
+  background: transparent;
+  color: inherit;
 }
