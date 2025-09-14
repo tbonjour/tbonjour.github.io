@@ -1,7 +1,7 @@
 ---
 title: "Who They Become"
 date: 2025-07-15
-categories: [Scholarship, Students]
+categories: [Scholarship]
 tags: [ERSP, undergraduate research, mentoring, UCSD, students]
 description: "Insights on growth, teamwork, and resilience from student check-ins in UC San Diego’s Early Research Scholars Program."
 ---
