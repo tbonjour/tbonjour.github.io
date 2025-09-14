@@ -44,6 +44,7 @@ social:
   name: Trevor Bonjour
   # email: example@domain.com # change to your email address
   links:
+    - https://tbonjour.github.io
     # The first element serves as the copyright owner's link
     # - https://twitter.com/username # change to your twitter homepage
     # - https://github.com/tbonjour # change to your github homepage
