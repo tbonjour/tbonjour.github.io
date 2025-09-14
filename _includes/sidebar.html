@@ -40,11 +40,18 @@
         </li>
         <!-- .nav-item -->
       {% endfor %}
+      <!-- students direct link -->
+      <li class="nav-item{% if page.url == '/categories/students/' %}{{ " active" }}{% endif %}">
+        <a href="{{ '/categories/students/' | relative_url }}" class="nav-link">
+          <i class="fa-fw fas fa-users"></i>
+          <span>FOR STUDENTS</span>
+        </a>
+      </li>
       <!-- blog -->
       <li class="nav-item{% if page.layout == 'home' %}{{ " active" }}{% endif %}">
         <a href="{{ '/blog/' | relative_url }}" class="nav-link">
           <i class="fa-fw fas fa-blog"></i>
-          <span>{{ 'posts' | upcase }}</span>
+          <span>{{ 'all posts' | upcase }}</span>
         </a>
       </li>
     </ul>
