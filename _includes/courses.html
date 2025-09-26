@@ -1,0 +1,80 @@
+{% comment %}
+  ---
+  layout: page
+  ---
+{% endcomment %}
+{% assign term_order = 'Winter:1,Spring:2,Summer:3,Fall:4' | split: ',' %}
+{% assign sortable_courses = '' | split: '' %}
+
+{% for course in site.data.courses %}
+  {% assign latest_sortval = '' %}
+  {% for quarter in course.quarters %}
+    {% assign year_padded = quarter.year | prepend: '0000' | slice: -4, 4 %}
+    {% assign term_num = term_order | where_exp: 'item', 'item contains quarter.term' | first | split: ':' | last %}
+    {% assign term_padded = term_num | prepend: '0' | slice: -1, 1 %}
+    {% assign sortval = year_padded | append: term_padded %}
+    {% if sortval > latest_sortval %}
+      {% assign latest_sortval = sortval %}
+    {% endif %}
+  {% endfor %}
+  {% assign yaml_padded = forloop.index0 | prepend: '000' | slice: -3, 3 %}
+  {% assign course_hash = latest_sortval | append: '||' | append: course.code | append: '||' | append: yaml_padded %}
+  {% assign sortable_courses = sortable_courses | push: course_hash %}
+{% endfor %}
+
+{% assign sorted_courses = sortable_courses | sort | reverse %}
+
+<ul class="teaching-list list-unstyled">
+  {% for course_hash in sorted_courses %}
+    {% assign parts = course_hash | split: '||' %}
+    {% assign code = parts[1] %}
+    {% assign course = site.data.courses | where: 'code', code | first %}
+    <li class="pub-entry">
+      <div class="course-title">
+        <strong>{{ course.name }}</strong><br>
+        {{ course.code }}
+      </div>
+      {% if course.quarters %}
+        <div class="course-quarters" style="display: flex; flex-wrap: wrap; gap: 8px;">
+          {% assign quarters_with_sortval = '' | split: '' %}
+          {% for quarter in course.quarters %}
+            {% assign term_num = term_order
+              | where_exp: 'item', 'item contains quarter.term'
+              | first
+              | split: ':'
+              | last
+            %}
+            {% assign sortval = quarter.year | append: term_num %}
+            {% assign quarter_hash = sortval | append: '||' | append: forloop.index0 %}
+            {% assign quarters_with_sortval = quarters_with_sortval | push: quarter_hash %}
+          {% endfor %}
+          {% assign sorted_quarters = quarters_with_sortval | sort | reverse %}
+          {% for quarter_hash in sorted_quarters %}
+            {% assign parts = quarter_hash | split: '||' %}
+            {% assign quarter_index = parts[1] | plus: 0 %}
+            {% assign quarter = course.quarters[quarter_index] %}
+            <span class="pub-links">
+              {% if quarter.link %}
+                <a href="{{ quarter.link }}" target="_blank">
+                  {{ quarter.term }}
+                  {{ quarter.year }}
+                </a>
+              {% else %}
+                <span>
+                  {{- quarter.term }}
+                  {{ quarter.year -}}
+                </span>
+              {% endif %}
+            </span>
+          {% endfor %}
+        </div>
+      {% endif %}
+      <div class="abstract-box">
+        {{ course.description }}
+      </div>
+      {% if course.enrollment %}
+        <div class="course-enrollment">Enrollment: {{ course.enrollment }}</div>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>

@@ -51,7 +51,8 @@ ol.bibliography {
   gap: 6px;
   align-items: center;
 
-  a {
+  a,
+  span {
     // border-bottom: none !important; // required because the theme sets it via a placeholder
     color: var(--link-color);
     border: 1px solid var(--link-color) !important; /* force all sides */
@@ -69,6 +70,7 @@ ol.bibliography {
   margin-bottom: 4px;
   border: 1px solid var(--text-muted-color);
   padding: 8px;
+  border-radius: 8px;
   color: var(--text-color);
   background: var(--card-bg);
   overflow-wrap: break-word;
@@ -82,4 +84,15 @@ ol.bibliography {
   margin: 0;
   background: transparent;
   color: inherit;
+}
+
+.teaching-list .abstract-box {
+  display: block;
+  border: none;
+}
+
+.course-title {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-bottom: 0.25rem;
 }
