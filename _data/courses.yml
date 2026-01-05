@@ -4,8 +4,10 @@
   quarters:
     - term: Fall
       year: 2024
+      link: https://canvas.ucsd.edu/courses/58722
     - term: Fall
       year: 2025
+      link: https://canvas.ucsd.edu/courses/68443
       # link: "/syllabus/cs234-winter2026.pdf"
 
 - name: "Introduction to Artificial Intelligence: Probabilistic Reasoning and Decision-Making"
@@ -42,6 +44,7 @@
   quarters:
     - term: Winter
       year: 2026
+      link: "https://ucsd-cse25.github.io/"
 
 - name: "Learning Sustainable Well-Being: Compassion for Self and Others, a Computing Perspective"
   code: CSE 88
@@ -49,5 +52,6 @@
   quarters:
     - term: Winter
       year: 2026
+      link: https://canvas.ucsd.edu/courses/71820
     - term: Spring
       year: 2026
